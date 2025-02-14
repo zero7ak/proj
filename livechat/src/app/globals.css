@@ -2,9 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  user-select: none;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --globalFont: 'Pretendard-Regular';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,5 +34,5 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--globalFont, Helvetica, sans-serif);
 }
